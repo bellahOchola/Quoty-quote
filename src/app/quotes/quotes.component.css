@@ -9,9 +9,12 @@ body{
 h1{
     font-style:italic;
 }
-p{
+.contents{
     margin-top:30px;
     border: 1px solid grey;
     box-shadow: 2px 2px 5px grey;
-    width:50%;
+    width:30%;
+    height:50%;
+    font-size: 20px;
+    margin-left: 20px;
 }
