@@ -10,8 +10,11 @@
     <h1>QUOTIES</h1>
     <hr>
     <div *ngFor= 'let quote of quotes; let i = index;'>
-           <p class="contents">{{quote.description}} <br><br>
-            {{quote.author}} <br> Published on {{quote.publishDate}}</p> 
+        <div class="contents">
+            <p class="desc">{{quote.description}}</p> 
+            <p>{{quote.author}}</p>
+            <p>Published on {{quote.publishDate|date}}</p>
+        </div> 
     </div>
 </body>
 </html>
