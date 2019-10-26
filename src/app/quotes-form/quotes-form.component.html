@@ -8,26 +8,24 @@
 </head>
 <body>
     <div class="container-fluid">
-        <h2 class="text-center">Create a new Goal</h2>
+        <h2 class="text-center">Create a new Quote</h2>
         <hr>
         <form>
             <div class="form-group">
       
-                <label for="name">Name</label>
-                <input type="text" required class="form-control" id="name">
+                <label for="name">Uploader</label>
+                <input type="text" required class="form-control" id="uploader">
       
             </div>
             <div class="form-group">
-      
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="4" required></textarea>
-      
+                    <label for="author">Author</label>
+                    <input type='text' id="author" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="complete">Completion</label>
-                <input type='date' id="complete" required>
-      
+                <label for="quoty">Quote</label>
+                <textarea class="form-control" id="quoty" rows="3" required></textarea>
             </div>
+            <button type="submit" class="btn btn-danger">Add Goal</button>
         </form>
       </div>
 </body>
