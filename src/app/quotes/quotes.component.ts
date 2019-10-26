@@ -14,6 +14,12 @@ export class QuotesComponent implements OnInit {
     new Quotes('When you cannot find the sunshine Be the sunshine', 'Mash James', new Date(2012,9,16)),
     // new Quotes('Never allow someone to be your priority while you are their slave', ' Catherine Carter', new Date(2015,7.28))
   ];
+
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.publishDate = new Date (quote.publishDate)
+    this.quotes.push(quote)
+  }
   constructor() { }
 
   ngOnInit() {

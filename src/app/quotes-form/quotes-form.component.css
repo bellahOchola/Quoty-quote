@@ -1,5 +1,5 @@
 #myForm{
-    background-color:transparent;
+   
     font-style: italic;
 }
 button{
@@ -9,3 +9,16 @@ button{
 .form-control{
     /* color:transparent; */
 }
+
+#space{
+    margin-left: 50px;
+}
+
+.card{
+    padding:10px;
+ }
+
+ .main{
+    border:none;
+ }
+

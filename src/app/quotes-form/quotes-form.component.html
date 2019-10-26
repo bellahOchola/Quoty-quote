@@ -1,30 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container-fluid">
-        <h2 class="text-center">Create a new Quote</h2>
+
+    <div id="space" class="">
+    <div class="card bg-transparent main">
+        <h5 class="text-center ">Upload a Quote</h5>
         <hr> 
-        <form id="myForm">
-            <div class="form-group">
+        <form id="myForm" class="" (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+            <div class="form-group ">
                 <label for="name">Uploader</label>
-                <input type="text" required class="form-control" id="uploader">
+                <input type="text" class="form-control card bg-transparent" id="uploader" required>
             </div>
             <div class="form-group">
                     <label for="author">Author</label>
-                    <input type='text' id="author" class="form-control" required>
+                    <input type='text' id="author" class="form-control card bg-transparent" required>
             </div>
             <div class="form-group">
                 <label for="quoty">Quote</label>
-                <textarea class="form-control" id="quoty" rows="3" required></textarea>
+                <textarea class="form-control card bg-transparent" id="quoty" rows="3" required></textarea>
             </div>
             <button type="submit" class="btn btn-danger">Add Quote</button>
         </form>
       </div>
-</body>
-</html>
