@@ -1,1 +1,7 @@
-<p>quotes works!</p>
+<div>
+    <h1>QUOTIES</h1>
+    <ul>
+        <li *ngFor= 'let quote of quotes; let i = index'></li>
+        {{quote.author}}
+    </ul>
+</div>

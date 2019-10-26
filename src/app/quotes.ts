@@ -1,5 +1,7 @@
 export class Quotes {
-    constructor(public description:string,
-        public author: string
-    )
+    constructor(public information:string,
+        public author: string){
+
+        }
+   
 }

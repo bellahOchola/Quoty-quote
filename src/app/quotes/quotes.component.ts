@@ -7,7 +7,9 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+
   quotes: Quotes[] = [
+    new Quotes('Enjoy the Little Things', 'By James Adam'),
     new Quotes('Enjoy the Little Things', 'By James Adam')
   ];
   constructor() { }
