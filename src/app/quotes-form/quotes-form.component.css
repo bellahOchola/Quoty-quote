@@ -1,0 +1,11 @@
+#myForm{
+    background-color:transparent;
+    font-style: italic;
+}
+button{
+    margin-bottom: 10px;
+}
+
+.form-control{
+    /* color:transparent; */
+}

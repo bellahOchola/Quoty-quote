@@ -2,7 +2,7 @@ body{
     background-image: url("https://cdn.pixabay.com/photo/2014/07/16/05/18/beach-394503_960_720.jpg");
     width:100%;
     background-size: cover;
-    height:630px;
+    height:650px;
     /* background-color: aliceblue;  */
     margin-top:0px;
     margin-right: 0px;
@@ -13,12 +13,12 @@ h1{
     font-style:italic;
 }
 .contents{
-    margin-top:30px;
+    margin-top:20px;
     border: 1px solid grey;
     box-shadow: 2px 2px 5px grey;
-    width:30%;
-    height:40%;
-    font-size: 15px;
+    width:70%;
+    height:30%;
+    font-size: 18px;
     margin-left: 20px;
     text-align: center;
     background-color: white;
@@ -26,4 +26,7 @@ h1{
 
 .desc{
     font-style: italic;
+}
+form{
+    background-color: transparent;
 }
