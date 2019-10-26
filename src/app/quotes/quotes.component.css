@@ -1,0 +1,14 @@
+body{
+    background-image: url("https://cdn.pixabay.com/photo/2018/04/28/22/03/dawn-3358468_960_720.jpg");
+    width:100%;
+    background-size: cover;
+    height:600px;
+    margin:0;
+}
+
+h1{
+    font-style:italic;
+}
+li{
+    margin-top:30px;
+}
