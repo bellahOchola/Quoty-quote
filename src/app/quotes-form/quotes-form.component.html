@@ -6,15 +6,15 @@
         <form id="myForm" class="" (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
             <div class="form-group ">
                 <label for="name">Uploader</label>
-                <input type="text" class="form-control card bg-transparent" id="uploader" required>
+                <input type="text" class="form-control card bg-transparent" id="uploader" [(ngModel)]='newQuote.uploader' name="uploader"  required>
             </div>
             <div class="form-group">
                     <label for="author">Author</label>
-                    <input type='text' id="author" class="form-control card bg-transparent" required>
+                    <input type='text' id="author" class="form-control card bg-transparent" [(ngModel)]='newQuote.author' name="author" required>
             </div>
             <div class="form-group">
                 <label for="quoty">Quote</label>
-                <textarea class="form-control card bg-transparent" id="quoty" rows="3" required></textarea>
+                <textarea class="form-control card bg-transparent" id="quoty" rows="3" [(ngModel)]='newQuote.description' name="quoty" required></textarea>
             </div>
             <button type="submit" class="btn btn-danger">Add Quote</button>
         </form>

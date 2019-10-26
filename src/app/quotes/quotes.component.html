@@ -14,8 +14,8 @@
             <div id="space" class="col-md-6">
                 <div *ngFor= 'let quote of quotes; let i = index;'>
                     <div class="contents">
-                        <p class="desc">{{quote.description}}</p> 
-                        <p>{{quote.author}}</p>
+                        <p><span class="desc">{{quote.description}}</span> -- {{quote.uploader}}</p> 
+                        <p>{{quote.author}} <br> </p>
                         <p>Published on {{quote.publishDate|date}}</p>
                     </div> 
                 </div>
