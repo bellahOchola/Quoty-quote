@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quotes } from '../quotes';
 
 @Component({
   selector: 'app-quotes',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-
+  quotes: Quotes[] = [
+    new Quotes('Enjoy the Little Things', 'By James Adam')
+  ];
   constructor() { }
 
   ngOnInit() {
