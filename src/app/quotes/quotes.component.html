@@ -11,7 +11,7 @@
     <hr>
     <div *ngFor= 'let quote of quotes; let i = index;'>
            <p class="contents">{{quote.description}} <br><br>
-            {{quote.author}}</p> 
+            {{quote.author}} <br> Published on {{quote.publishDate}}</p> 
     </div>
 </body>
 </html>
