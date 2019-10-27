@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+
 <body>
     <h4 >Quoties:Get Creative__Upload your own or simply view -- vote in acoordance to your likes.</h4>
     <hr>
@@ -14,12 +7,13 @@
             <div id="space" class="col-md-6">
                 <div *ngFor= 'let quote of quotes; let i = index;'>
                     <div class="contents">
-                        <p><span class="desc">{{quote.description}}</span> -- {{quote.uploader}}</p> 
-                        <p>{{quote.author}} <br> </p>
-                        <p>Published on {{quote.publishDate|date}}</p>
-                        <button>
-                            <i class="fa fa-thumbs-up fa-lg" style="font-size:20px"></i>like
-                        </button>
+                        <p><span class="desc">{{quote.description}}</span> <br>- {{quote.author}}</p> 
+                        <button class="btn btn-sm btn-primary" (click)='upvote(quote)'> {{quote.likes}} <i class="fa fa-thumbs-up" id="like"></i></button>
+                        <button class="btn btn-sm btn-success" (click)='downvote(quote)'> {{quote.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button>
+                        <p> {{quote.uploader}} Published on {{quote.publishDate|date}}</p>
+                        <!-- <app-quotes-detail *ngIf='quote.showInfo' bind-quota ='quote'></app-quotes-detail> -->
+                        <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button> 
+                    
                     </div> 
                 </div>
             </div>
@@ -29,5 +23,5 @@
         </div>
     </div>
 </body>
-</html>
+
 
