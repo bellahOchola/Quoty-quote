@@ -4,22 +4,23 @@
     <hr>
     <div class="container">
         <div class="row">
+                <div class="col-md-6">
+                        <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
+                    </div>
             <div id="space" class="col-md-6">
                 <div *ngFor= 'let quote of quotes; let i = index;'>
                     <div class="contents">
-                        <p><span class="desc">{{quote.description}}</span> <br>- {{quote.author}}</p> 
-                        <button class="btn btn-sm btn-primary" (click)='upvote(quote)'> {{quote.likes}} <i class="fa fa-thumbs-up" id="like"></i></button>
-                        <button class="btn btn-sm btn-success" (click)='downvote(quote)'> {{quote.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button>
-                        <p> {{quote.uploader}} Published on {{quote.publishDate|date}}</p>
+                        <p><span id="desc">{{quote.description}}</span> <br>- {{quote.author}}</p> 
+                        <button class="btn btn-sm btn-primary one" (click)='upvote(quote)'> {{quote.likes}} <i class="fa fa-thumbs-up" id="like"></i></button>
+                        <button class="btn btn-sm btn-success" (click)='downvote(quote)'> {{quote.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button><br><br>
+                        <p><span class="upload">Posted by {{quote.uploader}}</span> on {{quote.publishDate|date}}</p>
                         <!-- <app-quotes-detail *ngIf='quote.showInfo' bind-quota ='quote'></app-quotes-detail> -->
                         <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button> 
                     
                     </div> 
                 </div>
             </div>
-            <div class="col-md-6">
-                <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
-            </div>
+            
         </div>
     </div>
 </body>
