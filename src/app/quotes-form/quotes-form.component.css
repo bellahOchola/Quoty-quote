@@ -11,11 +11,12 @@ button{
 }
 
 #space{
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 .card{
     padding:10px;
+    color:white;
  }
 
  .main{
