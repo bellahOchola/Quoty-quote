@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -26,6 +26,21 @@ export class QuotesComponent implements OnInit {
   }
   downvote(quote){
     quote.dislikes = quote.dislikes+1;
+  }
+
+  @Output() isComplete = new EventEmitter<boolean>();
+
+  // quoteDelete(complete:boolean){
+  //   this.isComplete.emit(complete);
+  // }
+  deleteQuote(done, index){
+    if (done) {
+      let toDelete = confirm(`Are you sure you want to delete this quote?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
   }
   constructor() { }
 

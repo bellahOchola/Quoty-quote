@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, EventEmitter } from '@angular/core';
 import{ Quotes} from '../quotes';
 
 @Component({
@@ -14,6 +14,10 @@ export class QuotesDetailComponent implements OnInit {
   downvote(quote){
     quote.dislikes = quote.dislikes+1;
   }
+
+  // quoteDelete(complete:boolean){
+  //   this.isComplete.emit(complete);
+  // }
   constructor() { }
 
   ngOnInit() {
