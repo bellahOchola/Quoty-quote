@@ -1,5 +1,8 @@
 
 <body>
+        <style>
+                @import url('https://fonts.googleapis.com/css?family=Srisakdi&display=swap');
+            </style>
     <h4 >Quoties:Get Creative__Upload your own or simply view -- vote in acoordance to your likes.</h4>
     <hr>
     <div id="all">
@@ -12,12 +15,13 @@
                 <div *ngFor= 'let quote of quotes; let i = index;'>
                     <div class="contents">
                         <div class="text-center">
-                            <p><span id="desc">{{quote.description}}</span> <br>- {{quote.author}}</p> 
+                            <p><span>{{quote.description}}</span> <br>- {{quote.author}}</p> 
                         </div>
                         <button class="btn btn-sm btn-primary one" (click)='upvote(quote)'> {{quote.likes}} <i class="fa fa-thumbs-up" id="like"></i></button>
                         <button class="btn btn-sm btn-success two" (click)='downvote(quote)'> {{quote.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button>
-                        <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote($event,i)'><i class="fa fa-trash" id="delete"></i></button><br><br>
-                        <p><span class="upload">Posted by {{quote.uploader}}</span> {{quote.publishDate|dateCount}} days ago</p>
+                        <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote($event,i)'><i class="fa fa-trash" id="delete"></i></button><br>
+                        <hr>
+                        <p><span class="upload">Posted by: {{quote.uploader}}</span> {{quote.publishDate|dateCount}} days ago</p>
                     </div> 
                 </div>
             </div>

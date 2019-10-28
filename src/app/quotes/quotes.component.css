@@ -9,6 +9,9 @@ body{
     margin-right: 0px;
     margin-left: 0px;
 }
+body{
+font-family: 'Srisakdi', cursive;
+}
 
 h4{
     font-style:italic;
@@ -23,7 +26,7 @@ h4{
 .contents{
     margin-top:20px;
     border: 1px solid whitesmoke;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     box-shadow: 2px 2px 5px grey;
     width:95%;
     height:20%;
