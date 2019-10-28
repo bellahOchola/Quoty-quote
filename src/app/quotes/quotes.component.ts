@@ -43,6 +43,21 @@ export class QuotesComponent implements OnInit {
       }
     }
   }
+  firstNum :number
+  lastNum :number
+  count: number
+
+  loopVote(){
+    this.firstNum = 0
+    this.lastNum = 0
+
+    for(this.count=0 ; this.count < this.quotes.length; this.count++) {
+      this.lastNum = this.quotes[this.count].likes;
+      if(this.lastNum > this.firstNum){this.firstNum = this.lastNum}
+    }
+    return  this.firstNum
+  }
+
   constructor() { }
 
   ngOnInit() {

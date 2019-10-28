@@ -1,9 +1,9 @@
 
 <body>
         <style>
-                @import url('https://fonts.googleapis.com/css?family=Srisakdi&display=swap');
-            </style>
-    <h4 >Quoties:Get Creative__Upload your own or simply view -- vote in acoordance to your likes.</h4>
+                @import url('https://fonts.googleapis.com/css?family=Cormorant|Srisakdi&display=swap');
+                </style>
+    <h4 >"Quoties:Get Creative__Upload your own or simply view"</h4>
     <hr>
     <div id="all">
     <div class="container">
@@ -13,11 +13,11 @@
                     </div>
             <div id="space" class=" col-md-6">
                 <div *ngFor= 'let quote of quotes; let i = index;'>
-                    <div class="contents">
-                        <div class="text-center">
+                    <div class="contents" >
+                        <div class="text-center" [ngStyle]="quote.likes>=3?{'background-color': 'blue'} : {'background-color': 'white'}">
                             <p><span>{{quote.description}}</span> <br>- {{quote.author}}</p> 
                         </div>
-                        <button class="btn btn-sm btn-primary one" (click)='upvote(quote)'> {{quote.likes}} <i class="fa fa-thumbs-up" id="like"></i></button>
+                        <button class="btn btn-sm btn-primary one" (click)='upvote(quote)' > {{quote.likes}} <i class="fa fa-thumbs-up" id="like"></i></button>
                         <button class="btn btn-sm btn-success two" (click)='downvote(quote)'> {{quote.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button>
                         <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote($event,i)'><i class="fa fa-trash" id="delete"></i></button><br>
                         <hr>
