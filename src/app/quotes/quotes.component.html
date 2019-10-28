@@ -17,7 +17,7 @@
                         <button class="btn btn-sm btn-primary one" (click)='upvote(quote)'> {{quote.likes}} <i class="fa fa-thumbs-up" id="like"></i></button>
                         <button class="btn btn-sm btn-success two" (click)='downvote(quote)'> {{quote.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button>
                         <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote($event,i)'><i class="fa fa-trash" id="delete"></i></button><br><br>
-                        <p><span class="upload">Posted by {{quote.uploader}}</span> on {{quote.publishDate|date}}</p>
+                        <p><span class="upload">Posted by {{quote.uploader}}</span> {{quote.publishDate|dateCount}} days ago</p>
                     </div> 
                 </div>
             </div>
